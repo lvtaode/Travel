@@ -18,7 +18,7 @@ export default {
   name: 'HomeIcons',
   data () {
     return {
-      wiperOption: {
+      swiperOption: {
         pagination: '.swiper-pagination',
         autoplay: false
       },
