@@ -20,7 +20,8 @@ export default {
   data () {
     return {
       swiperOption: {
-        pagination: '.swiper-pagination'
+        pagination: '.swiper-pagination',
+        autoplay: false
       },
       iconList: [
         {
@@ -97,6 +98,7 @@ export default {
 @import '~styles/mixins.styl'
 .icons >>>.swiper-container
   height: 0
+<<<<<<< HEAD
   padding-bottom: 50%
 .icons
   margin-top .1rem
