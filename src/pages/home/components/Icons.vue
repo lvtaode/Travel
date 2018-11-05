@@ -18,6 +18,10 @@ export default {
   name: 'HomeIcons',
   data () {
     return {
+      wiperOption: {
+        pagination: '.swiper-pagination',
+        autoplay: false
+      },
       iconList: [
         {
           id: '#001',
