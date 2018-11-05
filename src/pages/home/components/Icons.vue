@@ -34,7 +34,7 @@ export default {
           desc: '文化古迹'
         },
         {
-          id: '#0090',
+          id: '#003',
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png',
           desc: '演出'
         },
