@@ -2,13 +2,13 @@
   <div>
     <div class="title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom">
+      <li class="item border-bottom" v-for="item of weekendList" :key="item.id">
         <div class="item-img-wrapper">
-          <img class="item-img" src="http://img1.qunarzz.com/sight/source/1511/14/1cf5dc2ecbfc16.jpg_r_640x214_b4b3a58a.jpg"/>
+          <img class="item-img" :src="item.imgUrl"/>
         </div>
         <div class="item-info">
-          <p class="item-title">的设等数据库计费</p>
-          <p class="item-desc">大会上尽快dfd就可获得会计核算房价肯定会借款方gg发货时发货速度快黑客技术</p>
+          <p class="item-title">{{item.title}}</p>
+          <p class="item-desc">{{item.desc}}</p>
         </div>
       </li>
     </ul>
@@ -17,7 +17,10 @@
 
 <script>
 export default {
-  name: 'HomeWeekend'
+  name: 'HomeWeekend',
+  props: {
+    weekendList: Array
+  }
 }
 </script>
 
@@ -30,7 +33,7 @@ export default {
   .item-img-wrapper
     overflow hidden
     height 0
-    padding-bottom 33.9%
+    padding-bottom 37.7%
   .item-img
     width 100%
   .item-info
@@ -42,5 +45,6 @@ export default {
     .item-desc
       line-height .4rem
       color #ccc
+      margin-bottom .1rem
       ellipsis()
 </style>

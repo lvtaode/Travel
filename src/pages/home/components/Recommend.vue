@@ -2,11 +2,11 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li class="item border-bottom">
-        <img class="item-img" src="http://img1.qunarzz.com/sight/p0/1602/de/de8400021b664c5390.img.jpg_200x200_46b16057.jpg" alt="">
+      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <img class="item-img" :src="item.imgUrl" alt="">
         <div class="item-info">
-          <p class="item-title">的设等数据库计费</p>
-          <p class="item-desc">大会上尽快dfdgg发货时发货速度快黑客技术</p>
+          <p class="item-title">{{item.title}}</p>
+          <p class="item-desc">{{item.desc}}</p>
           <button class="item-button">查看详情</button>
         </div>
       </li>
@@ -16,7 +16,10 @@
 
 <script>
 export default {
-  name: 'HomeRecommend'
+  name: 'HomeRecommend',
+  props: {
+    recommendList: Array
+  }
 }
 </script>
 
