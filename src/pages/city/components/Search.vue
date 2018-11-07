@@ -23,7 +23,7 @@ export default {
       text-align center
       padding 0 .1rem
       box-sizing border-box
-      font-size .3rem
+      font-size .28rem
       color #666
       border-radius .06rem
 </style>
