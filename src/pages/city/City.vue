@@ -2,8 +2,10 @@
   <div>
       <city-header></city-header>
       <city-search></city-search>
-      <city-list :hotCities="hotCities" :cities="cities"></city-list>
-      <city-alphabet :cities="cities"></city-alphabet>
+      <city-list :hotCities="hotCities" :cities="cities"
+                 :letter="letter">
+      </city-list>
+      <city-alphabet :cities="cities" @letter="letterClick"></city-alphabet>
   </div>
 </template>
 
@@ -24,10 +26,14 @@ export default {
   data () {
     return {
       cities: {},
-      hotCities: []
+      hotCities: [],
+      letter: ''
     }
   },
   methods: {
+    letterClick (msg) {
+      this.letter = msg
+    },
     getCityInfo () {
       axios.get('/api/city.json')
         .then(this.handleGetCityInfoSuccess)
