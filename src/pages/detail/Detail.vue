@@ -1,6 +1,6 @@
 <template>
   <div>
-    DetailBanner
+    <detail-banner></detail-banner>
   </div>
 </template>
 
