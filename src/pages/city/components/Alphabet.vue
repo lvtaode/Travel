@@ -3,9 +3,9 @@
     <li class="item"
         v-for="item of letters" :key="item"
         @click="handleLetterClick"
-        @touchstart="handleTouchStart"
-        @touchmove="handleTouchMove"
-        @touchend="handleTouchEnd"
+        @touchstart.prevent="handleTouchStart"
+        @touchmove.prevent="handleTouchMove"
+        @touchend.prevent="handleTouchEnd"
         :ref="item">
     {{item}}
     </li>
@@ -75,6 +75,6 @@ export default {
     justify-content center
     .item
       text-align center
-      line-height .4rem
+      line-height .32rem
       color $bgColor
 </style>
